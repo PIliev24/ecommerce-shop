@@ -1,7 +1,8 @@
 export interface Billboard {
   id: string;
-  label: string;
-  imageUrl: string;
+  label: string | null;
+  description: string | null;
+  imageUrl: string | null;
 }
 
 export interface Category {
@@ -14,7 +15,6 @@ export interface Product {
   id: string;
   category: Category;
   name: string;
-  price: string;
   isFeatured: boolean;
   size: Size;
   color: Color;
