@@ -32,6 +32,16 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           {route.label}
         </Link>
       ))}
+      <Link
+        key={"about-us"}
+        href={"/about-us"}
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-black",
+          pathname === `/about-us` ? "text-black" : "text-neutral-500"
+        )}
+      >
+        {"About us"}
+      </Link>
     </nav>
   );
 };

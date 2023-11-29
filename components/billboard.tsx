@@ -7,8 +7,13 @@ interface BillboardProps {
 
 const Billboard: React.FC<BillboardProps> = ({ data }) => {
   return (
-    <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden flex items-center justify-center">
-      <Image src={data?.imageUrl ?? ""} alt={""} width={1000} height={20} />
+    <div className="p-4 sm:p-6 lg:p-8 rounded-xl w-full overflow-hidden flex items-center justify-center">
+      <Image
+        src={data?.imageUrl ?? ""}
+        layout="fill"
+        objectFit="cover"
+        alt={""}
+      />
     </div>
   );
 };

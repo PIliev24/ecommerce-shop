@@ -11,7 +11,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
       <hr className="my-4" />
-      <div className="flex flex-col gap-y-6">
+      {/* <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
           <div>{data.size.name}</div>
@@ -23,7 +23,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             style={{ backgroundColor: data.color.value }}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -24,12 +24,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
         {images.map((image) => (
           <Tab.Panel key={image.id}>
             <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
-              <Image
-                fill
-                src={image.url}
-                alt="Image"
-                className="object-cover object-center"
-              />
+              <Image fill src={image.url} alt="Image" className="rounded-md" />
             </div>
           </Tab.Panel>
         ))}

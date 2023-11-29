@@ -38,8 +38,10 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   return (
     <div className="bg-white">
       <Container>
-        <Billboard data={category.billboard} />
-        <div className="px-4 m:px-6 lg:px-8 pb-24">
+        <div className="relative h-[450px]">
+          <Billboard data={category.billboard} />
+        </div>
+        <div className="py-10">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
             <MobileFilters sizes={sizes} colors={colors} />
             <div className="hidden lg:block">
