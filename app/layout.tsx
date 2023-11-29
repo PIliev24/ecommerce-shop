@@ -11,8 +11,8 @@ import ToastProvider from "@/providers/toast-provider";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Store",
-  description: "Store",
+  title: "Ned-ju",
+  description: "Store for handmade artwork, images and more",
 };
 
 export default function RootLayout({
