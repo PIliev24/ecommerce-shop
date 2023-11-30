@@ -11,19 +11,22 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
       <hr className="my-4" />
-      {/* <div className="flex flex-col gap-y-6">
-        <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Size:</h3>
-          <div>{data.size.name}</div>
-        </div>
-        <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Color:</h3>
-          <div
-            className="h-6 w-6 rounded-full border border-gray-600"
-            style={{ backgroundColor: data.color.value }}
-          />
-        </div>
-      </div> */}
+      <p className="text-opacity-50 text-black text-xl pr-10 leading-10 tracking-wide">
+        If you`re interested in purchasing an art piece featuring this design –
+        whether as a print, on a t-shirt, pillow, or any other format – please
+        reach out to us via email. We`d be delighted to assist you in owning a
+        piece of this unique art. Contact us at{" "}
+        <span
+          onClick={(e) => {
+            window.location.href = "mailto:neda.todorova22@gmail.com";
+            e.preventDefault();
+          }}
+          className="text-blue-400 hover:underline hover:cursor-pointer"
+        >
+          neda.todorova22@gmail.com
+        </span>{" "}
+        for further details and to place your order.
+      </p>
     </div>
   );
 };

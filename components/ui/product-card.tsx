@@ -27,33 +27,33 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   };
 
   return (
-    <div
-      onClick={handleClick}
-      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 bg-white cursor-pointer rounded-xl border p-3 space-y-4 transition-shadow duration-300 hover:shadow-xl"
-    >
-      {/* {Images and actions} */}
-      <div className="aspect-square rounded-xl bg-gray-100 relative">
-        <Image
-          src={data?.images?.[0]?.url}
-          alt="image"
-          fill
-          className="rounded-md"
-        />
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
-          <div className="flex gap-x-6 justify-center">
-            <IconBtn
-              onClick={onPreview}
-              icon={<Expand size={20} className="text-gray-600" />}
-            />
+    <>
+      <div
+        className="border rounded-lg p-4 shadow-md flex flex-col hover:cursor-pointer transition-shadow duration-300 hover:shadow-xl group"
+        onClick={handleClick}
+      >
+        <div className="w-full h-full overflow-hidden flex justify-center items-center relative">
+          <Image
+            src={data.images[0].url}
+            alt={data.name}
+            width={240}
+            height={240}
+          />
+          <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+            <div className="flex gap-x-6 justify-center">
+              <IconBtn
+                onClick={onPreview}
+                icon={<Expand size={20} className="text-gray-600" />}
+              />
+            </div>
           </div>
         </div>
+        <div className="mt-2">
+          <h2 className="text-lg font-bold">{data.name}</h2>
+          <p className="text-gray-600">{data.category.name}</p>
+        </div>
       </div>
-      {/* Description */}
-      <div>
-        <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category.name}</p>
-      </div>
-    </div>
+    </>
   );
 };
 
