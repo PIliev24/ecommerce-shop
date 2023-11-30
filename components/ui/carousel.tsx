@@ -27,7 +27,7 @@ const CustomCarousel: FC<CarouselProps> = ({ billboards }) => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [billboards.length]);
 
   return (
     <div className="relative h-[450px]">
