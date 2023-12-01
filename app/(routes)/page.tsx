@@ -15,7 +15,7 @@ const HomePage = async () => {
     <Container>
       <div className="space-y-10 pb-10">
         {billboards.length > 0 && <CustomCarousel billboards={billboards} />}
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-8 px-4">
           <ProductList title="Featured Products" items={products} />
         </div>
       </div>

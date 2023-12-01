@@ -30,7 +30,7 @@ const CustomCarousel: FC<CarouselProps> = ({ billboards }) => {
   }, [billboards.length]);
 
   return (
-    <div className="relative h-[450px]">
+    <div className="relative sm:h-[450px] h-[200px]">
       {billboards.map((billboard, index) => (
         <Transition
           key={index}
